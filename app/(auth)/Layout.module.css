@@ -1,0 +1,63 @@
+.imgStyle {
+    @apply bg-gradient-to-tr from-color-primary to-color-ternary rounded-l-md hidden md:block;
+    position: relative;
+    overflow: hidden;
+}
+
+.cartoonImg {
+    background: url('/clear-girl.png') no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-15%);
+    background-size: cover;
+    z-index: 1;
+}
+
+.itemOne {
+    background: url('/clear-noddle.png') no-repeat;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    width: 180px;
+    height: 100px;
+    background-size: contain;
+    z-index: 2;
+    animation: itemOne 25.5s ease-in 5.9s infinite;
+}
+
+.itemTwo {
+    background: url('/clear-sandwich.png') no-repeat;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    z-index: 0;
+    animation: itemTwo 18.5s ease-in .9s infinite;
+}
+
+@keyframes itemOne {
+    0% {
+        transform: translateX(290%);
+    }
+
+    100% {
+        transform: translateX(-250%);
+    }
+}
+
+@keyframes itemTwo {
+    0% {
+        transform: translateX(160%);
+    }
+
+    100% {
+        transform: translateX(-250%);
+    }
+}
