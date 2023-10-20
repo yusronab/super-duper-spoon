@@ -5,6 +5,7 @@ import InputFormBasic from "../Utilities/InputFormBasic";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
+import Link from "next/link";
 
 const Form = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -55,6 +56,9 @@ const Form = () => {
                 placeholder="Ketik disini . . ."
                 inputIcon={iconPassword}
             />
+            <Link href="/forgot-password" className="text-sm block text-slate-700 text-left -mt-3">
+                Lupa password?
+            </Link>
             <button
                 className="capitalize rounded-full w-2/3 bg-color-primary border-none font-bold duration-200
                 text-white py-2 hover:ring-2 hover:ring-color-primary hover:bg-white transition-all
