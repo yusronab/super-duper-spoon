@@ -6,7 +6,7 @@ const openSans = Open_Sans({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Risol',
+    template: '%s - Risol',
     default: 'Risol - Reservasi Online'
   },
   description: 'Easy ways to table reservation',

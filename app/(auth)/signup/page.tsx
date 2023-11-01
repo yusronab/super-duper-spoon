@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 const Page = () => {
     return (
         <div className="flex flex-col gap-4 px-8">
-            <h1 className="font-bold text-2xl capitalize text-left text-slate-700">buat akun baru</h1>
+            <h1 className="text-2xl font-bold text-slate-700">Register</h1>
+            <p className="text-sm text-slate-700 px-[5%]">Segera daftar untuk menikmati fitur yang tersedia</p>
             <Form />
             <Link
                 href="/signin"
