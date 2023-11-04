@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
     MdFastfood,
     MdFoodBank,
@@ -14,11 +14,11 @@ let tabs = [
     { id: "world", route: "/", label: "Home", icon: <MdOutlineHome /> },
     { id: "business", route: "/menu", label: "Menu", icon: <MdFastfood /> },
     { id: "ny", route: "/resto", label: "Restourant", icon: <MdFoodBank /> },
-    { id: "arts", route: "/", label: "Cart", icon: <MdOutlineShoppingCart /> },
+    { id: "arts", route: "/arts", label: "Cart", icon: <MdOutlineShoppingCart /> },
 ];
 
 const Navbar = () => {
-    const [activeTab, setActiveTab] = useState(tabs[0].id);
+    const location = usePathname();
 
     return (
         <nav className='flex flex-col items-between gap-y-4 fixed h-max bottom-0 lg:sticky lg:top-0 mt-auto
@@ -28,12 +28,11 @@ const Navbar = () => {
                     <Link
                         key={tab.id}
                         href={tab.route}
-                        onClick={() => setActiveTab(tab.id)}
-                        className={`${activeTab === tab.id ? 'text-white' : 'hover:opacity-50'} 
+                        className={`${location === tab.route ? 'text-white' : 'hover:opacity-50'} 
                         relative rounded-full px-3 py-1.5 text-sm font-medium focus-visible:outline
                         transition`}
                     >
-                        {activeTab === tab.id && (
+                        {location === tab.route && (
                             <motion.div
                                 layoutId="active-pill"
                                 className="absolute inset-0 bg-color-primary"

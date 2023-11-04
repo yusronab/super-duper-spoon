@@ -2,7 +2,7 @@ import { BsFacebook, BsInstagram, BsTelegram, BsTwitter, BsWhatsapp, BsYoutube }
 
 const Footer = () => {
     return (
-        <footer className=" px-[8%] py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-color-ternary gap-8">
+        <footer className="px-[8%] pt-12 pb-20 lg:pt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-color-ternary gap-8">
             <div className="md:col-span-2">
                 <h1 className="text-2xl">Risol</h1>
                 <p>Mudahnya reservasi tanpa perlu pergi mengantri</p>

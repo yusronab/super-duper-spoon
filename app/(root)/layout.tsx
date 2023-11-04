@@ -10,6 +10,7 @@ export default function RootLayout({
     <div>
       <Navbar />
       <div className="px-[8%]">{children}</div>
+      <div className="h-1 w-full bg-gradient-to-r from-transparent via-color-ternary to-transparent"></div>
       <Footer />
     </div>
   )

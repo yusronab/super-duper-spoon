@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { AiOutlineClockCircle, AiTwotonePhone } from "react-icons/ai";
 import { BiFoodMenu } from "react-icons/bi";
 import { MdLocationOn, MdOutlineTableBar } from "react-icons/md";
@@ -47,9 +48,11 @@ const CardResto = ({ item, active, index }: { item: any, active: boolean, index:
                     <MdOutlineTableBar />
                     <span>{item.menus}</span>
                 </p>
-                <button className="bg-color-primary text-white border-none rounded-s-md rounded-tr-3xl rounded-br-md py-2 px-4 my-3">
+                <Link
+                    href={`/resto/${item.id}`}
+                    className="bg-color-primary text-white border-none rounded-s-md rounded-tr-3xl rounded-br-md py-2 px-4 my-3">
                     Pesan sekarang
-                </button>
+                </Link>
             </div>
         </motion.div>
     );

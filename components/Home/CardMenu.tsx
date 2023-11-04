@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { MdOutlineHome } from "react-icons/md";
 
-const CardMenu = ({item, active, index}: {item: any, active: boolean, index: number}) => {
+const CardMenu = ({ item, active, index }: { item: any, active: boolean, index: number }) => {
     return (
         <motion.div
             className="flex flex-col"
@@ -20,8 +21,11 @@ const CardMenu = ({item, active, index}: {item: any, active: boolean, index: num
                 <p className="text-sm font-bold lg:text-base mt-3 mb-1 text-color-ternary">
                     {item.name}
                 </p>
-                <div className="text-xs lg:text-sm text-gray-600">
+                <p className="text-xs lg:text-sm text-gray-600 mb-1">
                     {item.price}
+                </p>
+                <div className="text-xs lg:text-sm text-color-ternary flex gap-2 items-center">
+                    <MdOutlineHome /><span>Warunk Steak</span>
                 </div>
                 <button className="bg-color-primary text-white border-none rounded-s-md rounded-tr-3xl rounded-br-md py-2 px-1 my-3 text-sm lg:text-base lg:px-4">
                     Pesan sekarang
